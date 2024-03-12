@@ -1,6 +1,6 @@
 # Practica Aplicaciones web y Redes Inalambricas
 
-# Uso de git, githuh con milestones e issues
+# Uso de git y github con milestones e issues
 
 ## Descripcion
 
