@@ -1,0 +1,220 @@
+:root {
+    --white: #ffffff;
+    --black: #000000;
+    --dark: #232830;
+    --very-light-pink: #c7c7c7;
+    --text-input-field: #f7f7f7;
+    --hospital-green: #acd9b2;
+  }
+  
+  html,
+  body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .main-container {
+    flex: 1;
+  }
+  body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    font-family: "Quicksand", sans-serif;
+  }
+  
+  /***************NAVBAR**************/
+  .menu {
+    display: none;
+  }
+  
+  .logo {
+    width: 120px;
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 24px;
+    border-bottom: 1px solid var(--very-light-pink);
+  }
+  .navbar-left {
+    display: flex;
+  }
+  
+  .navbar-left ul,
+  .navbar-right ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    height: 60px;
+  }
+  
+  .navbar-left ul {
+    margin-left: 12px;
+  }
+  
+  .navbar-left ul li a,
+  .navrbar-right ul li a {
+    text-decoration: none;
+    color: var(--very-light-pink);
+    border: 1px solid var(--white);
+    padding: 8px;
+    border-radius: 8px;
+  }
+  
+  .navbar-shopping-cart {
+    position: relative;
+  }
+  
+  .navbar-shopping-cart div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 16px;
+    height: 16px;
+    background-color: var(--hospital-green);
+    border-radius: 50%;
+    font-size: var(--sm);
+    font-weight: bold;
+    position: absolute;
+    top: -6px;
+    right: -3px;
+  }
+  
+  .navbar-email {
+    color: var(--very-light-pink);
+    font-size: var(--sm);
+    margin-right: 14px;
+  }
+  
+  .navbar-email img {
+    margin-left: 10px;
+    transform: rotate(90deg);
+  }
+  
+  /*pseudo clase*/
+  .navbar-left ul li a:hover,
+  .navrbar-right ul li a:hover {
+    border: 1px solid var(--hospital-green);
+    color: var(--hospital-green);
+  }
+  
+  /***************SEARCHBOX**************/
+  
+  .search-container {
+    display: flex;
+    margin: 20px 0;
+    padding-left: 45px; /* Ajustar el padding izquierdo para alinear con la primera columna */
+    text-align: center;
+  }
+  
+  .search-input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    width: 100%; 
+    max-width: 400px; 
+  }
+  
+  .search-input:focus {
+    outline: none;
+    border-color: var(--hospital-green);
+  }
+  
+  /***************CARDS**************/
+  .cards-container {
+    margin-top: 26px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 240px);
+    gap: 26px;
+    place-content: center;
+  }
+  
+  .product-card {
+    width: 240px;
+  }
+  
+  .product-card img {
+    width: 240px;
+    height: 240px;
+    border-radius: 20px;
+    object-fit: cover;
+  }
+  
+  .product-info figure {
+    margin: 0;
+  }
+  
+  .product-info figure img {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .product-info div p:nth-child(1) {
+    font-weight: bold;
+    font-size: var(--md);
+    margin-top: 0;
+    margin-bottom: 4px;
+  }
+  
+  .product-info div p:nth-child(2) {
+    font-size: var(--sd);
+    margin-top: 0;
+    margin-bottom: 0;
+    color: var(--very-light-pink);
+  }
+  
+  /*Estilado interno de los elementos del card con flex*/
+  .product-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 12px;
+  }
+
+  /FOOTER*/
+.footer-content {
+  text-align: center;
+  border-top: 1px solid var(--very-light-pink);
+  padding: 20px;
+  background-color: var(--white);
+  color: var(--very-light-pink);
+}
+
+/MEDIAQUERY*/
+@media (max-width: 640px) {
+  .cards-container {
+    grid-template-columns: repeat(auto-fill, 140px);
+  }
+  .product-card {
+    width: 140px;
+  }
+
+  .product-card img {
+    width: 140px;
+    height: 140px;
+  }
+
+  .menu {
+    display: block;
+  }
+  .navbar-left ul {
+    display: none;
+  }
+  .navbar-email {
+    display: none;
+  }
+
+  .search-container {
+    padding-left: 0;
+    justify-content: center;
+  }
+
+  .search-input {
+    width: 100%;
+    max-width: 300px;
+  }
+}
