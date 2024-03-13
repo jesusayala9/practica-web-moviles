@@ -174,3 +174,47 @@
     align-items: center;
     margin-top: 12px;
   }
+
+  /FOOTER*/
+.footer-content {
+  text-align: center;
+  border-top: 1px solid var(--very-light-pink);
+  padding: 20px;
+  background-color: var(--white);
+  color: var(--very-light-pink);
+}
+
+/MEDIAQUERY*/
+@media (max-width: 640px) {
+  .cards-container {
+    grid-template-columns: repeat(auto-fill, 140px);
+  }
+  .product-card {
+    width: 140px;
+  }
+
+  .product-card img {
+    width: 140px;
+    height: 140px;
+  }
+
+  .menu {
+    display: block;
+  }
+  .navbar-left ul {
+    display: none;
+  }
+  .navbar-email {
+    display: none;
+  }
+
+  .search-container {
+    padding-left: 0;
+    justify-content: center;
+  }
+
+  .search-input {
+    width: 100%;
+    max-width: 300px;
+  }
+}
